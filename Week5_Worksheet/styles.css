@@ -1,0 +1,88 @@
+/* Basic reset + readable defaults */
+* { box-sizing: border-box; }
+html,body { height: 100%; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: #f6f7fb;
+  color: #222;
+  line-height: 1.4;
+  padding: 1rem;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.header .lead { color: #555; }
+
+/* Layout (mobile-first) */
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+/* Cards */
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1rem;
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 4px 8px rgba(30,40,60,0.03);
+}
+
+/* Forms */
+label { display: block; margin: 0.6rem 0; font-size: 0.95rem; }
+input[type="text"], input[type="number"] {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.3rem;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  background: #fafafa;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.5rem 0.9rem;
+  background: linear-gradient(180deg,#4facfe,#00f2fe);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.btn:hover { transform: translateY(-1px); }
+
+/* Lists and summary */
+.list { list-style: none; padding: 0; margin: 0.5rem 0; max-height: 180px; overflow:auto; }
+.list li { padding: 0.5rem; border-bottom: 1px solid #f0f0f5; display:flex; justify-content:space-between; align-items:center; gap:10px; }
+.summary { font-weight:700; margin-top:0.5rem; }
+
+/* Items container (cards) */
+.items { display:grid; gap:0.6rem; margin-top:0.8rem; }
+.item-card { padding:0.7rem; background: #fff7e6; border-radius:8px; border:1px solid #ffe9c7; }
+
+/* Notes area */
+.notes { margin-top:0.6rem; display:flex; flex-direction:column; gap:0.6rem; }
+.note { padding:0.6rem; background:#eef9f3; border-radius:6px; border:1px solid #d8f0e2; display:flex; justify-content:space-between; align-items:center; }
+
+/* Footer */
+.footer { text-align:center; margin-top:1rem; color:#666; font-size:0.9rem; }
+
+/* Desktop grid */
+@media(min-width:900px){
+  .grid {
+    grid-template-columns: 1fr 1fr; /* two-column layout on larger screens */
+    gap: 1.2rem;
+  }
+}
+
+/* Dark theme toggled class */
+.dark {
+  background: #0f1724;
+  color: #e6eef6;
+}
+.dark .card { background: #0e1720; border-color: rgba(255,255,255,0.04); }
+.dark .btn { filter: brightness(1.05); }

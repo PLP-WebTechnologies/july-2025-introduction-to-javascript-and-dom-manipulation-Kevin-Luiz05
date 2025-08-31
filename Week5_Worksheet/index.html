@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PLP Week 5 — JS & DOM Mastery</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>PLP Week 5 — JavaScript & DOM</h1>
+    <p class="lead">Functions • Loops • DOM Manipulation — interactive demo</p>
+  </header>
+
+  <main class="grid">
+    <!-- PART 1: Variables & Conditionals -->
+    <section class="card" id="part-1">
+      <h2>Part 1 — Variables & Conditionals</h2>
+      <p>Enter your name and age. JS will check if you are an adult (≥ 18).</p>
+
+      <form id="ageForm" aria-label="Age check form">
+        <label>
+          Name
+          <input id="nameInput" type="text" placeholder="Your name" required />
+        </label>
+
+        <label>
+          Age
+          <input id="ageInput" type="number" placeholder="Your age" required min="0" />
+        </label>
+
+        <button type="submit" class="btn">Check Age</button>
+      </form>
+
+      <div id="ageResult" class="result" aria-live="polite"></div>
+    </section>
+
+    <!-- PART 2: Functions & Shopping Cart -->
+    <section class="card" id="part-2">
+      <h2>Part 2 — Functions (Shopping Cart)</h2>
+      <p>Add items to a simple cart. Functions calculate totals.</p>
+
+      <form id="cartForm" aria-label="Add to cart form">
+        <label>
+          Product
+          <input id="productName" type="text" placeholder="Product name" required />
+        </label>
+
+        <label>
+          Price (USD)
+          <input id="productPrice" type="number" placeholder="9.99" required step="0.01" min="0" />
+        </label>
+
+        <label>
+          Quantity
+          <input id="productQty" type="number" placeholder="1" required min="1" />
+        </label>
+
+        <button class="btn" type="submit">Add to Cart</button>
+      </form>
+
+      <div class="cart">
+        <h3>Your Cart</h3>
+        <ul id="cartList" class="list" aria-live="polite"></ul>
+        <div id="cartSummary" class="summary">Total: $0.00</div>
+      </div>
+    </section>
+
+    <!-- PART 3: Loops – Generate Items -->
+    <section class="card" id="part-3">
+      <h2>Part 3 — Loops (Generate Items)</h2>
+      <p>Generate sample item cards with a <code>for</code> loop and a <code>while</code> loop example.</p>
+
+      <button id="generateBtn" class="btn">Generate Items</button>
+      <div id="itemsContainer" class="items"></div>
+
+      <div class="countdown-area">
+        <button id="countdownBtn" class="btn">Start 5s Countdown</button>
+        <div id="countdown" aria-live="polite" class="result"></div>
+      </div>
+    </section>
+
+    <!-- PART 4: DOM Interactions -->
+    <section class="card" id="part-4">
+      <h2>Part 4 — DOM Interactions</h2>
+      <p>Toggle site theme, create and remove elements, and update the page dynamically.</p>
+
+      <div class="controls">
+        <button id="toggleThemeBtn" class="btn">Toggle Theme</button>
+        <button id="createNoteBtn" class="btn">Create Note</button>
+      </div>
+
+      <div id="notes" class="notes" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>
+      Built for <strong>PLP Africa</strong> — Week 5 Day 1. Files:
+      <code>index.html</code> • <code>style.css</code> • <code>script.js</code>.
+    </p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
